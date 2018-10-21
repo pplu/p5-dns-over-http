@@ -1,0 +1,24 @@
+#!/usr/bin/env perl
+
+use DoH::Client;
+
+foreach my $i (
+               { s => 'cloudflare-dns.com' },
+#               { s => 'dns.google.com', ep => '/resolve' },
+               { s => 'dns.quad9.net' },
+               { s => 'dns9.quad9.net' },
+               { s => 'dns10.quad9.net' },
+               { s => 'doh.cleanbrowsing.org', ep => '/doh/security-filter' },
+               { s => 'doh.cleanbrowsing.org', ep => '/doh/family-filter' },
+               { s => 'doh.cleanbrowsing.org', ep => '/doh/adult-filter' },
+              ) {
+  my $c = DoH::Client->new(
+    server => $i->{ s },
+    (defined $i->{ ep }) ? (resolve_endpoint => $i->{ ep }) : (),
+  );
+  my $res = $c->resolve('google.com', 'A');
+
+  use Data::Dumper;
+  print "----------$i->{ s }-----------\n"; 
+  print $res->string;
+}
