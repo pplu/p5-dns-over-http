@@ -1,10 +1,10 @@
 # DNS over HTTP client
 
-A Perl module that provides DNS DNS over HTTPS (DoH).
+A Perl module that provides DNS over HTTPS (DoH).
 
-This is just a small module that I've built to discover 
-the DNS over HTTPs protocol now that recently it has an 
-RFC (https://datatracker.ietf.org/doc/rfc8484/)
+This is just a small module that I've built to discover the DNS over HTTPS protocol now that recently it has an RFC (at the time of writing): https://datatracker.ietf.org/doc/rfc8484/
+
+This has not been published to CPAN, as it is just a small experiment to discover the protocol. PRs are welcome.
 
 ## Providers:
 
@@ -37,3 +37,9 @@ Quad9
 OpenDNS / Cisco
  - Docu: https://support.opendns.com/hc/en-us/articles/360038086532-Using-DNS-over-HTTPS-DoH-with-OpenDNS
  - accepts the wire format as per RFC 8484
+
+## See also
+
+ - A dig-like Perl DoH client and a small DoH server. https://svn.centralnic.com/centralnic/perl-doh
+ - https://metacpan.org/release/Net-DNS-Resolver-DoH.
+
