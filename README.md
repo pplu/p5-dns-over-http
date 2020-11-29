@@ -36,3 +36,6 @@ Quad9
 https://www.quad9.net/doh-quad9-dns-servers/
  - accepts the wire format as per RFC 8484
 
+OpenDNS / Cisco
+https://support.opendns.com/hc/en-us/articles/360038086532-Using-DNS-over-HTTPS-DoH-with-OpenDNS
+ - accepts the wire format as per RFC 8484

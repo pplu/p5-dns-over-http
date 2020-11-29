@@ -11,12 +11,15 @@ foreach my $i (
                { s => 'doh.cleanbrowsing.org', ep => '/doh/security-filter' },
                { s => 'doh.cleanbrowsing.org', ep => '/doh/family-filter' },
                { s => 'doh.cleanbrowsing.org', ep => '/doh/adult-filter' },
+	       { s => 'doh.opendns.com' },
+	       { s => 'doh.familyshield.opendns.com' },
+	       { s => 'doh.sandbox.opendns.com' },
               ) {
   my $c = DoH::Client->new(
     server => $i->{ s },
     (defined $i->{ ep }) ? (resolve_endpoint => $i->{ ep }) : (),
   );
-  my $res = $c->resolve('google.com', 'A');
+  my $res = $c->resolve('cisco.com', 'A');
 
   use Data::Dumper;
   print "----------$i->{ s }-----------\n"; 
