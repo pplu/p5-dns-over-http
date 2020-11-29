@@ -27,15 +27,13 @@ CloudFlare
  - accepts the wire format as per RFC 8484
 
 Google 
- - Docu: https://developers.google.com/speed/public-dns/docs/dns-over-https
- - doesn't accept wire format
- - only accepts a custom GET protocol
- - doesn't seem to support wire-format
+ - Docu: https://developers.google.com/speed/public-dns/docs/doh
+ - Google didn't support RFC 8484 when the RFC was published, having a custom protocol. As of June 26, 2019, they started supporting RFC 8484 https://security.googleblog.com/2019/06/google-public-dns-over-https-doh.html
 
 Quad9
-https://www.quad9.net/doh-quad9-dns-servers/
+ - Docu: https://www.quad9.net/doh-quad9-dns-servers/
  - accepts the wire format as per RFC 8484
 
 OpenDNS / Cisco
-https://support.opendns.com/hc/en-us/articles/360038086532-Using-DNS-over-HTTPS-DoH-with-OpenDNS
+ - Docu: https://support.opendns.com/hc/en-us/articles/360038086532-Using-DNS-over-HTTPS-DoH-with-OpenDNS
  - accepts the wire format as per RFC 8484

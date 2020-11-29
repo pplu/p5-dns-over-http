@@ -4,7 +4,7 @@ use DoH::Client;
 
 foreach my $i (
                { s => 'cloudflare-dns.com' },
-#               { s => 'dns.google.com', ep => '/resolve' },
+               { s => 'dns.google' },
                { s => 'dns.quad9.net' },
                { s => 'dns9.quad9.net' },
                { s => 'dns10.quad9.net' },
